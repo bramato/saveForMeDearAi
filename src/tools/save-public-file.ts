@@ -47,8 +47,10 @@ export async function handleSavePublicFile(args: any): Promise<any> {
 
     return {
       success: true,
-      url: result.url,
+      url: result.url, // URL pubblico permanente
       key: result.key,
+      urlType: 'permanent',
+      isPublic: true,
       message: `File uploaded successfully as public file. URL: ${result.url}`,
       driveName: activeConfig.driveName
     };

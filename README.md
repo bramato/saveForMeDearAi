@@ -6,7 +6,7 @@ A Model Context Protocol (MCP) server for managing files on S3 storage, supporti
 
 - 🚀 **Upload public and private files** with metadata
 - 📋 **List files** with descriptions and information
-- 🔗 **Temporary URLs** for private files
+- 🔗 **Immediate URL access** - URLs returned directly in upload response
 - 🌍 **Global and local configuration** for projects
 - ⚡ **Multi-provider support** (AWS S3, DigitalOcean Spaces, S3-compatible)
 - 🎯 **Claude Code integration** via MCP
@@ -120,6 +120,9 @@ Save a file as public and return the permanent URL.
   "success": true,
   "url": "https://bucket.endpoint.com/file.jpg",
   "key": "file.jpg",
+  "urlType": "permanent",
+  "isPublic": true,
+  "message": "File uploaded successfully as public file. URL: https://bucket.endpoint.com/file.jpg",
   "driveName": "my-drive"
 }
 ```
@@ -141,7 +144,12 @@ Save a file as private.
 {
   "success": true,
   "key": "document.pdf",
+  "url": "https://presigned-url...",
   "temporaryUrl": "https://presigned-url...",
+  "urlType": "temporary",
+  "expiresIn": 3600,
+  "expirationDate": "2024-01-15T11:30:00Z",
+  "message": "File uploaded successfully as private file. Temporary URL provided (expires in 1 hour).",
   "driveName": "my-drive"
 }
 ```

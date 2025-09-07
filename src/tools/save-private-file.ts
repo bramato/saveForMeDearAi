@@ -48,9 +48,13 @@ export async function handleSavePrivateFile(args: any): Promise<any> {
     return {
       success: true,
       key: result.key,
-      message: `File uploaded successfully as private file. Use get_file_url to get access URL.`,
-      driveName: activeConfig.driveName,
-      temporaryUrl: result.url // This is already a presigned URL for private files
+      url: result.url, // URL presigned temporaneo (1 ora di validità)
+      temporaryUrl: result.url, // Mantenuto per compatibilità
+      urlType: 'temporary',
+      expiresIn: 3600,
+      expirationDate: new Date(Date.now() + 3600 * 1000).toISOString(),
+      message: `File uploaded successfully as private file. Temporary URL provided (expires in 1 hour).`,
+      driveName: activeConfig.driveName
     };
   } catch (error) {
     return {
