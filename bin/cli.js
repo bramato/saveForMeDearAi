@@ -2,6 +2,7 @@
 
 const { Command } = require('commander');
 const { setupCommand } = require('../dist/cli/setup.js');
+const path = require('path');
 
 const program = new Command();
 
@@ -9,6 +10,13 @@ program
   .name('saveformedearai')
   .description('CLI tool for SaveForMeDearAI - S3 file management MCP server')
   .version('1.0.0');
+
+// Default action: start MCP server
+program
+  .action(async () => {
+    // If no command is provided, start the MCP server
+    require('../dist/index.js');
+  });
 
 program
   .command('setup')
@@ -23,7 +31,6 @@ program
     
     // Create .claude directory if it doesn't exist
     const fs = require('fs');
-    const path = require('path');
     
     const claudeDir = '.claude';
     if (!fs.existsSync(claudeDir)) {
@@ -37,8 +44,7 @@ program
     console.log('{');
     console.log('  "mcpServers": {');
     console.log('    "saveformedearai": {');
-    console.log('      "command": "node",');
-    console.log(`      "args": ["${path.resolve('./dist/index.js')}"]`);
+    console.log('      "command": "saveformedearai"');
     console.log('    }');
     console.log('  }');
     console.log('}');

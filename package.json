@@ -1,6 +1,6 @@
 {
   "name": "saveformedearai",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP server for S3 file management with AWS and DigitalOcean support",
   "main": "dist/index.js",
   "bin": {

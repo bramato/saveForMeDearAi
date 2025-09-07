@@ -31,7 +31,26 @@ npm install -g .
 
 ## Configuration
 
-### Initial Setup
+### Quick Setup (2 steps)
+
+1. **Install and configure:**
+```bash
+npm install -g saveformedearai
+saveformedearai setup
+```
+
+2. **Add to Claude MCP config:**
+```json
+{
+  "mcpServers": {
+    "saveformedearai": {
+      "command": "saveformedearai"
+    }
+  }
+}
+```
+
+### Available Commands
 
 ```bash
 # Configure S3 drive (global)
@@ -40,23 +59,8 @@ saveformedearai setup
 # Initialize local project
 saveformedearai init
 
-# List configured drives
-saveformedearai setup
-```
-
-### MCP Configuration for Claude
-
-Add to your Claude MCP configuration file:
-
-```json
-{
-  "mcpServers": {
-    "saveformedearai": {
-      "command": "node",
-      "args": ["path/to/node_modules/saveformedearai/dist/index.js"]
-    }
-  }
-}
+# Start MCP server (automatic when called by Claude)
+saveformedearai
 ```
 
 ### Configuration Structure

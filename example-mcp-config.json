@@ -1,9 +1,7 @@
 {
   "mcpServers": {
     "saveformedearai": {
-      "command": "node",
-      "args": ["./dist/index.js"],
-      "env": {}
+      "command": "saveformedearai"
     }
   }
 }
