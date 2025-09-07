@@ -1,6 +1,17 @@
+<div align="center">
+
 # SaveForMeDearAI
 
-A Model Context Protocol (MCP) server for managing files on S3 storage, supporting AWS S3 and DigitalOcean Spaces.
+[![npm version](https://badge.fury.io/js/saveformedearai.svg)](https://badge.fury.io/js/saveformedearai)
+[![npm downloads](https://img.shields.io/npm/dm/saveformedearai.svg)](https://www.npmjs.com/package/saveformedearai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/bramato/saveForMeDearAi.svg?style=social)](https://github.com/bramato/saveForMeDearAi/stargazers)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![S3](https://img.shields.io/badge/AWS-S3-FF9900?logo=amazonaws&logoColor=white)](https://aws.amazon.com/s3/)
+
+*A Model Context Protocol (MCP) server for managing files on S3 storage, supporting AWS S3 and DigitalOcean Spaces.*
+
+</div>
 
 ## Features
 
@@ -280,3 +291,23 @@ MIT
 ## Contributing
 
 Contributions are welcome! Please open an issue or pull request.
+
+## 🎵 Support the Developer
+
+**Love coding with chill vibes?** Support this project by listening to my developer album:
+
+### **"Code Chill: Loops of Relaxation"** 🎧
+
+*Perfect background music for your coding sessions*
+
+<div align="center">
+
+[![Listen on Apple Music](https://img.shields.io/badge/Apple_Music-000000?style=for-the-badge&logo=apple-music&logoColor=white)](https://music.apple.com/it/album/code-chill-loops-of-relaxation/1815061487)
+[![Listen on Spotify](https://img.shields.io/badge/Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white)](http://open.spotify.com/intl-it/album/0hBmSuyrMWpdazYTMCV0fp?go=1&nd=1&dlsi=ce8dfc8f237340e7)
+[![Listen on YouTube Music](https://img.shields.io/badge/YouTube_Music-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com/playlist?list=OLAK5uy_lHyFL4eHr1FAikCrvsQrPYkU3AAX4DM6k)
+
+</div>
+
+*Every stream helps support the development of free tools like this one! 🙏*
+
+</div>

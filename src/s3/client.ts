@@ -325,5 +325,22 @@ export class S3Manager {
    * - Generic S3: Uses path-style format (endpoint/bucket)
    * 
    * @returns Base URL for public file access
-   */\n  private getPublicBaseUrl(): string {\n    // Extract endpoint configuration for URL construction\n    const endpoint = this.client.config.endpoint as any;\n    const endpointUrl = typeof endpoint === 'string' ? endpoint : endpoint?.hostname || '';\n    \n    // Provider-specific URL formatting\n    if (endpointUrl.includes('amazonaws.com')) {\n      // AWS S3 standard format: bucket.s3.amazonaws.com\n      return `https://${this.bucketName}.s3.amazonaws.com`;\n    } else if (endpointUrl.includes('digitaloceanspaces.com')) {\n      // DigitalOcean Spaces format: bucket.region.digitaloceanspaces.com\n      return `https://${this.bucketName}.${endpointUrl}`;\n    } else {\n      // Generic S3-compatible services: endpoint/bucket (path-style)\n      return `${endpointUrl}/${this.bucketName}`;\n    }\n  }
+   */
+  private getPublicBaseUrl(): string {
+    // Extract endpoint configuration for URL construction
+    const endpoint = this.client.config.endpoint as any;
+    const endpointUrl = typeof endpoint === 'string' ? endpoint : endpoint?.hostname || '';
+    
+    // Provider-specific URL formatting
+    if (endpointUrl.includes('amazonaws.com')) {
+      // AWS S3 standard format: bucket.s3.amazonaws.com
+      return `https://${this.bucketName}.s3.amazonaws.com`;
+    } else if (endpointUrl.includes('digitaloceanspaces.com')) {
+      // DigitalOcean Spaces format: bucket.region.digitaloceanspaces.com
+      return `https://${this.bucketName}.${endpointUrl}`;
+    } else {
+      // Generic S3-compatible services: endpoint/bucket (path-style)
+      return `${endpointUrl}/${this.bucketName}`;
+    }
+  }
 }
