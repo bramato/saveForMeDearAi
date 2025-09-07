@@ -1,0 +1,16 @@
+# Claude Agent Context Management
+.mcp/
+# Claude Code project instructions
+CLAUDE.md
+
+node_modules/
+dist/
+*.log
+.env
+.env.local
+.DS_Store
+*.tgz
+.nyc_output
+coverage/
+.vscode/
+.issue/
