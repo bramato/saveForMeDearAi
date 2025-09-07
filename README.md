@@ -22,7 +22,7 @@ npm install -g saveformedearai
 ### Installation from Source
 
 ```bash
-git clone https://github.com/your-username/saveForMeDearAi.git
+git clone https://github.com/bramato/saveForMeDearAi.git
 cd saveForMeDearAi
 npm install
 npm run build
@@ -230,7 +230,7 @@ Force Path Style: true (typically)
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/saveForMeDearAi.git
+git clone https://github.com/bramato/saveForMeDearAi.git
 cd saveForMeDearAi
 
 # Install dependencies
